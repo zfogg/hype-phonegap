@@ -1,0 +1,52 @@
+<div class="header text-center">
+    <p>
+        <img src="images/logo.png" alt="logo">
+    </p>
+</div>
+
+<div class="row marketing text-center">
+
+    <div class="col-xs-6">
+        <h4>hype</h4>
+        <h5>{{sesh.hype && sesh.hype || 0 | maxDecimals:1}}</h5>
+    </div>
+    <div class="col-xs-6">
+        <h4>runningAvg</h4>
+        <h5>{{sesh.runningAvg && sesh.runningAvg.mean || 0 | maxDecimals:3}}</h5>
+    </div>
+
+    <div class="col-xs-12">
+        <p>
+            <a class="btn btn-lg"
+                ng-class="{'btn-success': !sesh.started, 'btn-danger': sesh.started}"
+                ng-click="sesh.started && stop() || start()">
+                {{sesh.started && 'Stop' || 'Start'}}!
+            </a>
+        </p>
+    </div>
+
+    <div class="col-xs-4">
+        <h4>x</h4>
+        <h5>{{sesh.acceleration && sesh.acceleration.x || 0 | maxDecimals:3}}</h5>
+    </div>
+    <div class="col-xs-4">
+        <h4>y</h4>
+        <h5>{{sesh.acceleration && sesh.acceleration.y || 0 | maxDecimals:3}}</h5>
+    </div>
+    <div class="col-xs-4">
+        <h4>z</h4>
+        <h5>{{sesh.acceleration && sesh.acceleration.z || 0 | maxDecimals:3}}</h5>
+    </div>
+</div>
+
+<div class="footer text-center">
+    <p>♥ Hype ♥</p>
+    <small>
+        <p class="text-muted">
+        <a href="https://twitter.com/zfogg">@zfogg</a>
+        + <a href="https://twitter.com/agentwaj">@agentwaj</a>
+        + <a href="https://twitter.com/davefontenot">@davefontenot</a>
+        + <a href="https://twitter.com/altoanthem">@altoanthem</a>
+        </p>
+    </small>
+</div>
